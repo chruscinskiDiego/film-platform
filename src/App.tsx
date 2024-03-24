@@ -1,6 +1,14 @@
+import {ThemeProvider} from 'styled-components'
+import {GlobalStyles} from './styles/globals'
+import {theme} from './styles/theme'
+import { AppRoutes } from './routes';
+
 function App(){
   return(
-    <h1>Film</h1>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles/>
+      <AppRoutes/>
+    </ThemeProvider>
   )
 }
 
